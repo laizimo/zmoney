@@ -1,9 +1,9 @@
 <template>
   <div class="introduce">
+    <Header></Header>
     <div class="introduce-banner1">
       <div class="introduce-banner1-head">
-        <img src="../../static/image/logo.png" alt="logo" class="introduce-banner1-img">
-        <span class="introduce-banner1-title">ZMOENY</span>
+        <img src="../../static/image/blue-logo.png" alt="logo" class="introduce-banner1-img">
       </div>
       <div class="introduce-banner1-desc">
         一个知识产权自由化交易平台
@@ -96,9 +96,16 @@
 </template>
 
 <script>
+import Header from './header.vue'
+import Footer from './footer.vue'
+
 export default {
   data () {
     return {}
+  },
+  components: {
+    Header,
+    Footer
   }
 }
 </script>
@@ -107,7 +114,6 @@ export default {
 .introduce {
   width: 100%;
   position: relative;
-  margin-top: 60px;
   background: #0f1836;
   overflow: hidden;
 }
@@ -115,6 +121,7 @@ export default {
 .introduce-banner1 {
   width: 100%;
   height: 619px;
+  margin-top: 60px;
   background: url('../../static/image/introduce_bg.png') no-repeat center top;
   padding-top: 1px;
 }
@@ -126,8 +133,7 @@ export default {
 }
 
 .introduce-banner1-img {
-  width: 100px;
-  height: 100px;
+  width: 100%;
 }
 
 .introduce-banner1-title {

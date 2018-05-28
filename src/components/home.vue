@@ -1,163 +1,200 @@
 <template>
-  <div class="home-content">
-    <div class="home-content-banner1">
-      <img src="../../static/image/h5-banner-text.png" alt="title" class="home-content-banner1-img">
-      <span class="home-content-banner1-text">基于区块链的知识产权交易所，为文字工作者提供便利，让有知识的人富裕起来</span>
-      <el-button type="primary" class="home-content-banner1-btn">立即申请</el-button>
+  <div class="home">
+    <div id="particles-js"></div>
+    <div class="logo">
+      <img src="../../static/image/home-logo.png" alt="" class="logo-image">
     </div>
-    <div class="home-content-banner2">
-      <div class="home-content-banner2-title">产品理念</div>
-      <div class="home-content-banner2-description">为知识产权提供认证保护，利用区块链进行知识追踪，使得文字工作者更加富有，让为知识工作的人富有起来</div>
-      <ul class="home-content-banner2-body">
-        <li class="banner2-item">
-          <img src="../../static/image/One.80610fba.svg" class="banner2-item-img">
-          <div class="banner2-item-desc">
-            <h3>知识认证</h3>
-            <span class="banner2-item-text">
-              将内容进行认证，同时与作者进行绑定，保障申请认证的作者的权益。同时，将内容进行加密，返回唯一的加密序列，供作者进行保存。
-            </span>
-          </div>
-        </li>
-        <li class="banner2-item">
-          <img src="../../static/image/Two.034c52bc.svg" class="banner2-item-img">
-          <div class="banner2-item-desc">
-            <h3>知识分销</h3>
-            <span class="banner2-item-text">
-              组合形成的文章、书籍、视频等衍生品，可以使用社交工具快速分发到网络，系统基于智能合约，根据组合比例自动分配报酬给用户。
-            </span>
-          </div>
-        </li>
-      </ul>
-    </div>
-    <div class="home-content-banner3">
-      <h1 class="banner3-title">产品服务</h1>
-      <div class="banner3-description">以鼓励人类知识创作与分享为核心，服务人类知识创新。</div>
-      <ul class="banner3-body">
-        <li class="banner3-body-item">
-          <img src="../../static/image/blockchain.jpg" alt="" class="banner3-body-item-img">
-          <div class="banner3-body-item-title">区块链</div>
-          <div class="banner3-body-item-content">区块链，比特币的底层技术，通过P2P点对点通信网络，数字加密算法，共识机制，构建而成的公开，透明，不可篡改，去中心化的分布式账本。</div>
-        </li>
-        <li class="banner3-body-item">
-          <img src="../../static/image/matrix.jpg" alt="" class="banner3-body-item-img">
-          <div class="banner3-body-item-title">矩阵链</div>
-          <div class="banner3-body-item-content">矩阵链—Matrixchain，交易所基于 Matrixchain 创建，将来有更多的各行各业的应⽤基于该平台搭建，共创区块链生态新商业文明。</div>
-        </li>
-        <li class="banner3-body-item">
-          <img src="../../static/image/ddn.jpg" alt="" class="banner3-body-item-img">
-          <div class="banner3-body-item-title">DDN网络</div>
-          <div class="banner3-body-item-content">DDN网络：数据分发网络，是知识组合与分销的底层网络架构，为创作者知识变现提供了完美辅助，打通了知识付费的最后一个通道。</div>
-        </li>
-      </ul>
-    </div>
+    <ul class="nav">
+      <li class="nav-item">
+        <a href="#/introduce">项目介绍</a>
+      </li>
+      <li class="nav-item">
+        <a href="#/upload">数字存证</a>
+      </li>
+      <li class="nav-item">
+        <a href="#/">区块链浏览器</a>
+      </li>
+      <li class="nav-item">
+        <a href="#/user/index">个人中心</a>
+      </li>
+    </ul>
   </div>
 </template>
 
 <script>
 export default {
-  name: 'Home',
-  data () {
-    return {
-    }
+  mounted () {
+    /* eslint-disable */
+    particlesJS('particles-js', {
+      "particles": {
+        "number": {
+          "value": 80,
+          "density": {
+            "enable": true,
+            "value_area": 800
+          }
+        },
+        "color": {
+          "value": "#ffffff"
+        },
+        "shape": {
+          "type": "circle",
+          "stroke": {
+            "width": 0,
+            "color": "#000000"
+          },
+          "polygon": {
+            "nb_sides": 5
+          },
+          "image": {
+            "src": "img/github.svg",
+            "width": 100,
+            "height": 100
+          }
+        },
+        "opacity": {
+          "value": 0.5,
+          "random": false,
+          "anim": {
+            "enable": false,
+            "speed": 1,
+            "opacity_min": 0.1,
+            "sync": false
+          }
+        },
+        "size": {
+          "value": 4,
+          "random": true,
+          "anim": {
+            "enable": false,
+            "speed": 40,
+            "size_min": 0.1,
+            "sync": false
+          }
+        },
+        "line_linked": {
+          "enable": true,
+          "distance": 150,
+          "color": "#ffffff",
+          "opacity": 0.4,
+          "width": 1
+        },
+        "move": {
+          "enable": true,
+          "speed": 4,
+          "direction": "none",
+          "random": false,
+          "straight": false,
+          "out_mode": "out",
+          "bounce": false,
+          "attract": {
+            "enable": false,
+            "rotateX": 100,
+            "rotateY": 1200
+          }
+        }
+      },
+      "interactivity": {
+        "detect_on": "Window",
+        "events": {
+          "onhover": {
+            "enable": true,
+            "mode": "grab"
+          },
+          "onclick": {
+            "enable": true,
+            "mode": "push"
+          },
+          "resize": true
+        },
+        "modes": {
+          "grab": {
+            "distance": 140,
+            "line_linked": {
+              "opacity": 1
+            }
+          },
+          "bubble": {
+            "distance": 400,
+            "size": 40,
+            "duration": 2,
+            "opacity": 8,
+            "speed": 3
+          },
+          "repulse": {
+            "distance": 200,
+            "duration": 0.4
+          },
+          "push": {
+            "particles_nb": 4
+          },
+          "remove": {
+            "particles_nb": 2
+          }
+        }
+      },
+      "retina_detect": true
+    })
   }
 }
 </script>
 
-<!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-
-.home-content {
-  position: relative;
-  overflow: hidden;
-  margin-top: 60px;
-}
-
-.home-content-banner1 {
-  background: url('../../static/image/bg_banner1.png') 60% center no-repeat;
-  position: relative;
+#particles-js {
+  z-index: 10;
   width: 100%;
-  height: 500px;
-  padding-top: 1px;
-  padding-left: 100px;
-}
-
-.home-content-banner1-img {
-  display: block;
-  margin-top: 50px;
-}
-
-.home-content-banner1-text {
-  font-size: 30px;
-  color: #fff;
-  display: block;
-  width: 518px;
-  margin-top: 20px;
-}
-
-.home-content-banner1-btn {
-  width: 150px;
-  height: 40px;
-  margin-left: 175px;
-  margin-top: 50px;
-}
-
-.home-content-banner2 {
-  width: 100%;
-  height: 420px;
-  padding: 60px 100px;
-  box-sizing: border-box;
-}
-
-.home-content-banner2-title {
-  font-size: 36px;
-  font-weight: 700;
-}
-
-.home-content-banner2-description {
-  margin-top: 10px;
-}
-
-.home-content-banner2-body {
+  position: fixed;
+  top: 0;
+  left: 0;
+  min-height: 1200px;
+  height: 100%;
+  background: url("https://s10.mogucdn.com/mlcdn/c45406/180510_68b4e1l7cjad79642bab999f6dgih_2638x1753.jpg") no-repeat;
+  background-size: cover;
+  background-position: top;
   display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-.banner2-item {
-  width: 500px;
-  margin-top: 50px;
-}
-
-.banner2-item-img {
-  display: inline-block;
-  margin: 20px;
-}
-
-.banner2-item-desc {
-  width: 300px;
-  display: inline-block;
-}
-
-.banner2-item-text {
-  margin-top: 10px;
-  display: inline-block;
-}
-
-.home-content-banner3 {
-  width: 100%;
-  background: #fff;
-  padding: 60px 100px;
-  box-sizing: border-box;
-}
-
-.banner3-description {
-  margin-top: 20px;
-}
-
-.banner3-body {
-  display: flex;
-  margin-top: 30px;
-}
-
-.banner3-body-item {
+.logo {
   width: 400px;
+  height: 165px;
+  z-index: 20;
+  position: relative;
+  margin: 200px auto 0;
+}
+
+.logo-image {
+  display: block;
+  width: 100%;
+}
+
+.nav {
+  position: relative;
+  z-index: 20;
+  width: 400px;
+  margin: 10px auto;
+  display: flex;
+  justify-content: space-between;
+  height: 50px;
+  color: #ef3892;
+  font-size: 16px;
+}
+
+.nav-item {
+  line-height: 50px;
+}
+
+.nav-item a {
+  color: #ef3892;
+  font-size: 16px;
+  display: block;
+}
+
+.nav-item a:hover {
+  border-top: 2px solid #fff;
+  color: #fff;
+  border-bottom: 2px solid #fff;
 }
 </style>
+

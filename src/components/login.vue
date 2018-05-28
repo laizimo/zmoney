@@ -1,6 +1,8 @@
 <template>
   <div class="login">
-    <img src="../../static/image/logo.png" alt="logo" class="login-logo">
+    <a href="#/">
+      <img src="../../static/image/b-logo.png" alt="logo" class="login-logo">
+    </a>
     <div class="login-title">用户登陆</div>
     <div class="login-content">
       <el-input v-model="username" placeholder="请输入用户名" class="username-input"></el-input>
@@ -8,7 +10,7 @@
       <div class="forget-pwd-warp">
         <a href="#/forgetpwd" class="forget-password">忘记密码?</a>
       </div>
-      <el-button class="login-btn" type="primary">登录</el-button>
+      <el-button class="login-btn" type="primary" @click="login()">登录</el-button>
       <div class="others">
         <div class="other-item">
           <img class="other-item-img" src="data:image/png;base64,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" alt="">
@@ -26,11 +28,47 @@
 </template>
 
 <script>
+import axios from 'axios'
+
 export default {
   data () {
     return {
       username: '',
       password: ''
+    }
+  },
+  methods: {
+    login () {
+      const username = this.username
+      const password = this.password
+      if (!this.username && !this.password) {
+        this.$notify.error({
+          title: '登陆失败',
+          message: '用户名和密码不能为空'
+        })
+      } else {
+        axios.post('/api/user/login', {
+          username,
+          password
+        }).then((resp) => {
+          if (resp.data.success) {
+            window.localStorage.setItem('username', username)
+            this.$router.push({
+              path: '/user/index'
+            })
+          } else {
+            this.$notify.error({
+              title: '登陆失败',
+              message: '稍后重试'
+            })
+          }
+        }).catch(() => {
+          this.$notify.error({
+            title: '登陆失败',
+            message: '服务器卡顿，请稍后重试'
+          })
+        })
+      }
     }
   }
 }
@@ -48,9 +86,8 @@ export default {
 
 .login-logo {
   width: 100px;
-  height: 100px;
   display: block;
-  margin: 0 auto;
+  margin: 20px auto;
 }
 
 .login-title {
